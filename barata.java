@@ -1,24 +1,23 @@
-package POO;
+// Autores: André Oliveira, Enrico Hidalgo, Ryan Fidelis;
+// Atividade: 07;
+// Curso de POO aplicado ao Robocode.
+
+package pdoAER;
 import robocode.*;
 
-public class RobotPDOAER extends Robot
+public class CHARLES extends Robot
 {
-	
 	public void run() {
-		while(true){
-		
-			ahead(25);
-			back(25);
-			
-			turnLeft(15);			
-			turnRight(10);
+	while(true){
+		ahead(400);
 		
 		}
 	}
-	public void onHideWall(HitWallEvent event){
-		setDebugProperty("Angulo de colisão", String.valueOf(event.getBearing())); 
-		turnLeft(50);
-		
-		
+	public void onHitWall(HitWallEvent event){
+		setDebugProperty("Angulo da colisao", String.valueOf(event.getBearing()));
+		while(true){
+		turnLeft(1);
+		ahead(800);
+		}
 	}
 }
